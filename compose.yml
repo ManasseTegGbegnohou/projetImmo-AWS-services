@@ -10,6 +10,8 @@ services:
       - backend
     networks:
       - immo-network
+    environment:
+      - VITE_API_URL=https://projetImmo-backend.${MY_DOMAIN}/api
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.frontend.rule=Host(`projetImmo.${MY_DOMAIN}`)"
