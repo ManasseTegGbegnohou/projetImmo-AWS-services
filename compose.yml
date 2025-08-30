@@ -10,8 +10,6 @@ services:
       - backend
     networks:
       - immo-network
-    environment:
-      - VITE_API_URL=${API_BASE_URL:-http://localhost:8888}/api
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.frontend.rule=Host(`projetImmo.${MY_DOMAIN}`)"
@@ -40,7 +38,7 @@ services:
         condition: service_healthy
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.backend.rule=Host(`projetImmo-backend.${MY_DOMAIN}`)"
+      - "traefik.http.routers.backend.ruyle=Host(`projetImmo-backend.${MY_DOMAIN}`)"
       - "traefik.http.routers.backend.entryPoints=websecure"
       - "traefik.http.services.backend.loadbalancer.server.port=8888"
 

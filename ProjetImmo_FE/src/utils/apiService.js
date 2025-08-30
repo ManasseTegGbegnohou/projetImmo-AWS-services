@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8888/api";
+const API_URL = "https://projetImmo-backend.manac.duckdns.org/api";
 
 export const getAllHouses = async () => {
     try {
